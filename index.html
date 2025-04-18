@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para o Amor da Minha Vida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Segoe+UI&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe6e6, #ffe0f0);
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3em;
+      color: #c0392b;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.2em;
+      color: #e74c3c;
+      margin-top: 50px;
+    }
+    .carta {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 20px;
+      max-width: 800px;
+      margin: 30px auto;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+    .linha-do-tempo {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    .momento {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+    }
+    .momento:hover {
+      transform: scale(1.02);
+    }
+    .momento img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 15px 0;
+    }
+    .btn-surpresa {
+      margin-top: 50px;
+      padding: 15px 35px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-surpresa:hover {
+      transform: scale(1.08);
+      background: #e63956;
+    }
+    #mensagem-final {
+      font-size: 3em;
+      font-family: 'Dancing Script', cursive;
+      color: #ff0066;
+      display: none;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <audio id="audio-romantico">
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio embutido.
+  </audio>
+
+  <h1>Para o Amor da Minha Vida</h1>
+
+  <div class="carta">
+    <p>Hoje é o seu dia, e eu queria te lembrar o quanto você é especial pra mim. 🌹</p>
+
+    <p>
+      E não só porque é o seu aniversário — mas porque é mais um capítulo da sua vida que eu tenho o privilégio de fazer parte.
+      <br><br>
+      Quis preparar esse momento com carinho, pensando em cada detalhe, porque você merece o melhor.
+      <br>
+      Sua presença na minha vida é uma das coisas mais lindas que já me aconteceu. Seu sorriso, sua leveza, sua força... tudo em você me inspira e me faz querer ser alguém melhor.
+      <br><br>
+      Essa noite é uma pequena forma de te agradecer por ser quem você é, por tudo o que já vivemos e por tudo que ainda vamos viver juntos. Que esse jantar e cada momento aqui sejam lembranças boas pra guardar no coração.
+    </p>
+
+    <p>Que venham muitos aniversários, muitos jantares, e muitos "nós dois". Te amo, hoje e sempre. ❤️</p>
+  </div>
+
+  <h2>Fotos que aquecem meu coração</h2>
+  <div class="linha-do-tempo">
+    <div class="momento">
+      <p>Simplesmente você, e isso já basta pra iluminar tudo ✨</p>
+      <img src="foto1.jpeg" alt="começo">
+      <p>Esse seu rostinho me derreteu na primeira vez que vi</p>
+    </div>
+    <div class="momento">
+      <p>Seu olhar deslumbrante sempre me deixa sem palavras </p>
+      <img src="foto2.jpg" alt="namoro">
+      <p>literalmente</p>
+    </div>
+    <div class="momento">
+      <p>Sempre me pego admirando essa imagem, e acabo chegando na mesma conclusão 💕</p>
+      <img src="foto3.jpeg" alt="Um dia comum, mas com você">
+      <p>Sou o homem mais sortudo do mundo por estar ao seu lado 💕</p>
+    </div>
+  </div>
+
+  <button class="btn-surpresa" onclick="mostrarMensagem()">Clique para uma surpresinha 💖</button>
+  <div id="mensagem-final">EU TE AMO MUITO!!! 💘</div>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById('mensagem-final').style.display = 'block';
+
+      // Tocar música após interação
+      const audio = document.getElementById('audio-romantico');
+      audio.play();
+    }
+  </script>
+</body>
+</html>
